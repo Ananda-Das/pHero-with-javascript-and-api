@@ -18,16 +18,16 @@
             <label tabindex="0" class="btn btn-ghost btn-circle w-full">
               <img src="Logo.png" alt="logo" />
             </label>
-            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+            <!-- <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li><a>Homepage</a></li>
               <li><a>Portfolio</a></li>
               <li><a>About</a></li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <div class="navbar-center">
           <!-- <a class="btn btn-ghost normal-case text-xl">daisyUI</a> -->
-          <button class="text-[#252525] text-xl font-semibold bg-gray-300 p-3">Sort by View</button>
+          <button class="text-[#252525] text-xl font-semibold bg-gray-300 p-3 hover:bg-red-500" onclick="dataSort()" id="data-sort">Sort by View</button>
         </div>
         <div class="navbar-end">
           <button class="btn btn-ghost p-3 bg-red-600 text-white">blog</button>
@@ -35,9 +35,10 @@
       </div>
       <!-- nav-bar-end -->
     </header>
-    <main>
+    <main class="lg:w-11/12 w-4/5 mx-auto text-center ">
       <!-- tab-container -->
-      <div class="mt-4 w-4/5 mx-auto text-center flex justify-center" id="tab-container">
+      
+      <div class="mt-4  flex justify-center lg:flex-row flex-col md:flex-row" id="tab-container">
         <!-- <div class="tabs">
                 <a class="tab">Tab 1</a> 
                 <a class="tab ">Tab 2</a> 
@@ -45,9 +46,15 @@
               </div> -->
       </div>
 
-      <div id="card-container" class="grid grid-cols-4 gap-4 w-11/12 mx-auto mt-5">
+    <!-- <div id="data-container"> -->
+      <div id="card-container" class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 mt-5">
        
       </div>
+    <!-- </div> -->
+      <!-- <div class="flex justify-center items-center w-full max-h-max flex-col hidden" id="no-data">
+        <img src="Icon.png" alt="">
+        <p class="text-[#171717] font-bold text-2xl mt-6">Oops!! Sorry, There is no content here</p>
+    </div> -->
     </main>
     <footer>
         
