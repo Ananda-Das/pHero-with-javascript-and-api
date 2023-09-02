@@ -13,7 +13,6 @@ const handleCategory = async () => {
     tabContainer.appendChild(tabContainerDiv);
   });
 
-  // console.log(data.data);
 };
 
 
@@ -29,15 +28,10 @@ const handleDataLoad = async(categoryId) =>{
 }
 
 const handleCategoryItem = (data) => {
-  // const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`);
-
-  // const data = await res.json();
-
-  // console.log(data.data);
 
   const cardContainer = document.getElementById("card-container");
 
-  // if (data.length > 0) {
+  if (cardData.length > 0) {
     cardContainer.innerText = "";
     data.forEach((video) => {
 
@@ -109,95 +103,18 @@ const handleCategoryItem = (data) => {
         `;
       cardContainer.appendChild(cardContainerDiv);
     });
-  // } else {
-  //   // cardContainer.removeAttribute()
-  //   // cardContainer.classList.add('grid-cols-1');
-  //   cardContainer.innerHTML = `
-  //   <div class="flex justify-center items-center w-full flex-col col-span-4 max-h-full">
-  //       <img src="Icon.png" alt="">
-  //       <p class="text-[#171717] font-bold text-2xl mt-6">Oops!! Sorry, There is no content here</p>
-  //   </div>
-  //   `;
-  // }
+  } else {
+    // cardContainer.removeAttribute()
+    // cardContainer.classList.add('grid-cols-1');
+    cardContainer.innerHTML = `
+    <div class="flex justify-center items-center w-full flex-col col-span-4 max-h-full my-24">
+        <img src="Icon.png" alt="">
+        <p class="text-[#171717] font-bold text-2xl mt-6">Oops!! Sorry, There is no content here</p>
+    </div>
+    `;
+  }
 };
 
-
-// const sorting =  (newData) => {
-
-//   const singleData = newData.map(element => {
-//     const viwes = element.others.views
-//     let viwesWithoutK = viwes.replace(/K/g, '')
-//     const viwesNumber = parseFloat(viwesWithoutK)
-//     const sort = sorting(tube)
-
-//   })
-//   singleData.sort((a, b) => {
-//     return b - a
-//   })
-//   let sortedViewValues = singleData.forEach(parsedValue => {
-//     const value = parsedValue + 'k'
-
-//   })
-//   return singleData;
-// }
-
-// const dataSort = async () => {
-//   const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/1000`);
-//   const data = await res.json();
-
-//   // console.log(data.data.sort());
-//   // console.log(data.data[0].others.views);
-//   // data.sort((a, b) => parseInt(b.others.views) - parseInt(a.others.views))
-
-//   const singleData = data.data.map((element) => {
-//     const views = element.others.views;
-//     let viwesWithoutK = views.replace(/K/g, "");
-//     const viwesNumber = parseFloat(viwesWithoutK);
-//     // const sort = sorting(tube);
-//     return viwesNumber;
-//   });
-//   // console.log(singleData.sort());
-
-//   // console.log(singleData.sort((a, b) => parseInt(b.others.views) - parseInt(a.others.views)));
-
-//   singleData.sort((a, b) => {
-//     return b - a;
-//   });
-
-//   // console.log(singleData);
-
-//   // const dataSortButton = document.getElementById('data-sort');
-
-//   // handleCategoryItem(singleData);
-
-//   // data.data.forEach((video) => {
-//   // const viewArray = data.data.map(video.others.views);
-//   // console.log(video.others.views);
-//   // console.log(viewArray);
-//   // console.log(viewArray);
-//   // video.others.views.sort();
-//   // const singleData = data.data.map(element => {
-//   //       const viwes = element.others.views;
-//   //       // let viwesWithoutK = viwes.replace(/K/g, '')
-//   //       // const viwesNumber = parseFloat(viwesWithoutK)
-//   //       // const sort = sorting(tube)
-//   //       return viwes;
-
-//   //     })
-//   // console.log(singleData);
-//   // });
-
-//   // for datasort test
-//   const tube = data.data;
-//   if (isSorted) {
-//     const sort = tube.sort((a, b) => {
-//       return a.others.views - b.others.views;
-//     });
-//     console.log(sort);
-//     displayTube(tube);
-//   }
-//   console.log(tube);
-// };
 
 handleCategory();
 handleDataLoad("1000");

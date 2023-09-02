@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- dauisy ui link -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <!-- nav-bar-start -->
+        <div class="navbar bg-base-100 p-9 border-b-2">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <label tabindex="0" class="btn btn-ghost btn-circle w-full">
+                <img src="Logo.png" alt="logo" />
+              </label>
+              <!-- <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Homepage</a></li>
+                <li><a>Portfolio</a></li>
+                <li><a>About</a></li>
+              </ul> -->
+            </div>
+          </div>
+          <div class="navbar-center">
+            <!-- <a class="btn btn-ghost normal-case text-xl">daisyUI</a> -->
+            <a class="text-[#252525] text-xl font-semibold bg-gray-300 p-3 hover:bg-red-500" href="index.html">Home</a>
+          </div>
+          <div class="navbar-end">
+            <a class="btn btn-ghost p-3 bg-red-600 text-white" href="blog.html">blog</a>
+          </div>
+        </div>
+        <!-- nav-bar-end -->
+      </header>
+    <main class="w-4/5 mx-auto">
+
+        <!-- question-1-start -->
+        <div class="mt-5 text-justify">
+            <p class="font-bold text-2xl mb-2">Question-1: Discuss the scope of 'var', 'let', and 'const'? </p>
+            <p class="text-xl"><span class="font-bold">Solution:</span> To know about the Socpe of Var, Let and Const we frist know what is Scope. Scope means where we can use these variables. Scope are two types. Globally and locally. <br> </p>
+
+            <ol class="text-xl">
+                <li><span class="font-bold">Var:</span> When var variable declared outside of a function then it act like global variable. If it declared inside a function then it act as local variable. But it also allow hosting. Which means if we call it inside a function sometime it can be call outside from the function.</li>
+                <li><span class="font-bold">Let:</span> Variables declared with let are block-scoped. The let variable used inside the block where it declared & it can used to the declared nested block. We can reasign the let variable.</li>
+                <li><span class="font-bold">Const:</span> Const variables are also block-scoped variable. As like let variable const variable can also use in the block & it's nasted block. We cannot reasign the const variable. </li>
+            </ol>
+            
+        </div>
+        <!-- question-1-end -->
+
+        <!-- question-2-start -->
+        <div class="mt-5 text-justify">
+            <p class="font-bold text-2xl mb-2">Question-2: Tell us the use cases of 'null' and 'undefined'? </p>
+            <p class="text-xl">
+            <ol class="text-xl">
+                <li><span class="font-bold">null:</span> null is an assignment value for variable. If a variable assigned as null then it contains no value. When null is assigned any value then it means the variable is empty or blank. </li>
+                <li><span class="font-bold">undefined :</span> undefined means Not defined. If we decleare a variable but do not assigne any value then it shows us undefined. </li>
+            </ol>
+            </p>
+        </div>
+        <!-- question-2-end -->
+
+        <!-- question-3-start  -->
+        <div class="mt-5 text-justify mb-10">
+            <p class="font-bold text-2xl mb-2">Question-3: What do you mean by REST API? </p>
+            <p class="text-xl"> Applications or devices can connect to and communicate with one another according to a set of rules known as an API, or application programming interface. An API that adheres to the design tenets of the REST, or representational state transfer, architectural style is known as a REST API. Because of this, REST APIs are also known as RESTful APIs.
+            </p>
+        </div>
+        <!-- question-3-end  -->
+
+    </main>
+    <footer>
+
+    </footer>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
